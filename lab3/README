@@ -1,0 +1,19 @@
+Summary:
+In this lab I implemented the sorting algorithms for insertion and merge sort. Both sorting method works as needed, but I feel that there is definitely a more effecient way the code could have been put. Overall both method works.
+
+Insertion case:
+-Best case: The time complexity O(n) where n is the number of elements in the array which is 8 in our case. n-1 compares, n copies, and 0 swaps. For compares, the first index,'0',does not have a number to its left, hence why it is n-1. Swaps is 0 since it is already in the best case, it does not go through the inner loop where the swap resides.
+-Worst Case: The time complexity O(n^2), where n is the number of elements in the array which is 8 in our case, this is because of the nested for loop. (n-1)n/2 for number of compares and swaps since this is now the worst case, and number of copy remains as n. (n*n=n^2)
+-Average case: its time complexity, comparisons, swaps, and copy is somewhere between the worst and best case. Since the average case can vary, it is difficult to determine it exactly.
+
+Merge sort: T(n)=2T(n/2)+O(n)=O(nlogn)
+-Best case: O(n*log(n)) for its time complexity.
+-Worst Case: O(n*log(n)) for its time complexity.
+-average Case: O(n*log(n)) for its time complexity.
+
+For all of the cases, the time complexity is always O(n*logn). This is probally because in mySort, the array will always be divided regardless of the input. So hence all cases have the same time complexity equation. O(logn) represents the logarithimic number of recursive calls and O(n) represents the linear time complexity of merge at each level of recursion. For both cases, the number of comparisons, swaps, and copy remained the same. This is cus no matter what the merge function will alway break it up, then merge no matter what. For the average case, the number of comparisons and copy iterations may vary but it always have teh same time complexity.
+
+References:
+Worked with Aadil
+
+GfG. (2023, November 28). Merge sort - data structure and algorithms tutorials. GeeksforGeeks. https://www.geeksforgeeks.org/merge-sort/ 
